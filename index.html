@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Page Template</title>
+    <script type="text/javascript" src="d3.js"></script>
+  </head>
+  <body>
+    <h2>List</h2>
+    <script type="text/javascript">
+      var animals = ["dragon","sea-otter","bear","bee","unicorn","chicken","deer","dolphin","fox","koala"];
+      d3.select("body").append("ul")
+          .selectAll("li")
+          .data(animals)
+          .enter()
+          .append("li")
+          .text(function(d) {return d;});
+    </script>
+  </br >
+    <p>d3 v4 VS. d3 v5 - CSV Files<p>
+      <ul>
+        <li>D3 v4 uses XMLHttpRequest method, and does not return a promise.</li>
+        <li>D3 v5 uses the fetch API and returns a promise.</li>
+      </ul>
+  </body>
+</html>
